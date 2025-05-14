@@ -4,9 +4,9 @@
 }
 
 .cart-page {
-  background: #F9F6E6;
+  background: bisque;
   width: 100%;
-  margin: 3% 0;
+  margin: 0 0;
 }
 
 .cart-icon {
@@ -77,3 +77,4 @@ button {
   font-weight: bold;
   border: none;
 }
+

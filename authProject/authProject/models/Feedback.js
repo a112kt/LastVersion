@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');  
 
 const feedbackSchema = new mongoose.Schema(
   {
@@ -12,6 +12,10 @@ const feedbackSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    name: {         
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
@@ -19,4 +23,3 @@ const feedbackSchema = new mongoose.Schema(
 const Feedback = mongoose.model('Feedback', feedbackSchema);
 
 module.exports = Feedback;
-

@@ -13,11 +13,17 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST new feedback
+// POST new feedback (تم إضافة name هنا)
 router.post('/', async (req, res) => {
   try {
-    const { rate, comment } = req.body;
-    const newFeedback = new Feedback({ rate, comment });
+    const { name, rate, comment } = req.body;
+
+    // تأكد من إرسال البيانات المطلوبة
+    if (!name || !rate || !comment) {
+      return res.status(400).json({ message: 'name, rate, and comment are required' });
+    }
+
+    const newFeedback = new Feedback({ name, rate, comment });
     await newFeedback.save();
     res.status(201).json(newFeedback);
   } catch (error) {
@@ -35,8 +41,6 @@ router.delete("/delete/:id", async (req, res)  => {
     res.status(500).json({ error: "Error deleting feedback" });
   }
 });
-
-
 
 module.exports = router;
 

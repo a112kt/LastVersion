@@ -3,7 +3,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import Home from './Components/Home/Home'
-import AboutAs from './Components/AboutAs/AboutAs'  
+
 import Shop from './Components/Shop/Shop'
 import Products from './Components/Products/Products'
 import Servies from './Components/Servies/Servies'
@@ -28,12 +28,11 @@ function App() {
       children: [
         { index: true, element: <Home /> },
 
-        { path: "aboutAs", element: <AboutAs /> },  
+
         { path: "shop", element: <Shop /> },
         { path: "product", element: <Products /> },
         { path: "servies", element: <Servies /> },
 
-        { path: "aboutAs", element: <AboutAs /> },  {/* تم تصحيح المسار */},
         { path: "shop", element: <Shop /> },
         { path: "product", element: <Products /> },
         { path: "servies", element: <Servies /> },
