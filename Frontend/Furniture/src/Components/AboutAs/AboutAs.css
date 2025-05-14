@@ -81,13 +81,13 @@
     border-left: 2px solid #eee;
   }
   
-  .reviewCard {
+  /* .reviewCard {
     background-color: #f1f1f1;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 15px;
   }
-  
+   */
   .reviewName {
     font-weight: bold;
     color: #333;
@@ -101,4 +101,41 @@
     margin-top: 5px;
     color: #444;
   }
+
+  .reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.reviewCard {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.buttonGroup {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn, .deleteBtn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
   

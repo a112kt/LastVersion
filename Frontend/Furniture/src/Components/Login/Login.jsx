@@ -22,7 +22,7 @@ export default function Login() {
         const response = await axios.post('http://localhost:8000/api/auth/signin', values);
         if (response.data.success) {
           localStorage.setItem("token", response.data.token);
-          localStorage.setItem("user",response.data.name)
+          localStorage.setItem("username",response.data.name)
           setStatus({ success: response.data.message });
           navigate('/'); 
         } else {
